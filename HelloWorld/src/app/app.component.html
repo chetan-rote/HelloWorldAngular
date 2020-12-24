@@ -1,0 +1,15 @@
+
+<div>
+  <!----UC1 One Way Data Binding---->
+  <!--UC2 Display Bridgelabz logo using propert binding-->
+  <!--UC3 Launch BridgeLabz site in a new tab on clicking Bridgelabz logo-->  
+  <h1>Hello {{this.userName}} from BridgeLabz</h1>
+  <img [src]="imgUrl" (click)="onClick($event)" alt="The BridgeLabz logo."/>
+</div>
+<div>
+  <!--UC4 Two way Binding-->
+  <input (input)= "onInput($event)" [(ngModel)]= "userName" />
+  <!-- UC5 User Name Validation and show erroe if wrong user name input-->>
+  <span class=error-output>{{this.nameError}}</span>
+</div>
+<router-outlet></router-outlet>
